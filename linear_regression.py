@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-import matplotlib.animation as animation
 
 
 def normalize(X):
@@ -47,13 +46,9 @@ def gradient_descent(X, y, learning_rate, num_iter, lambd=0.0):
     return theta, J_history
 
 
-train_data = pd.read_csv('train.csv')
-test_data = pd.read_csv('test.csv')
-
-X_train = train_data['x'].values
-y_train = train_data['y'].values
-X_test = test_data['x'].values
-y_test = test_data['y'].values
+# data we use to test this algorithm
+X_train = np.transpose([-1, 0, 1, 2, 3, 5, 7, 9])
+y_train = np.transpose([-1, 3, 2.5, 5, 4, 2, 5, 4])
 
 X = X_train
 y = y_train
@@ -67,7 +62,7 @@ X = np.append(X, bias, axis=1) # add bias to X matrix
 
 
 learning_rate = 10e-5
-num_iter = 10
+num_iter = 1000
 
 theta, J_history = gradient_descent(X, y, learning_rate, num_iter)
 #theta = normal_equation(X, y)

@@ -1,6 +1,6 @@
 # machine-learning-library
 
-This repository includes implementations of some machine learning algorithms, using only numpy and matplotlib.
+This repository includes implementations of some machine learning algorithms, using only numpy (math library) and matplotlib (plotting library).
 
 Currently included:
 - Linear regression
@@ -13,4 +13,6 @@ In the future, I intend to add:
 - SVD classifier
 - K-nearest neighbours classifier
 - PCA dimensionality reduction
-- hierarhical clustering
+- hierarchical clustering
+
+- animation of gradient descent with different hyper-parameters
